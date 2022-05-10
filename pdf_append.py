@@ -7,7 +7,7 @@ pdfWriter = PyPDF2.PdfFileWriter()
 
 # Create pdfs from images
 for filename in os.listdir():
-    if filename.endswith(".png"):
+    if filename.endswith(".jpg"):
         with open(f"image_pages/{filename}.pdf", "wb") as f:
             f.write(img2pdf.convert([filename]))
 
